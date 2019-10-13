@@ -22,7 +22,7 @@ public class ListingService {
     }
 
     public Listing findByID(long id) {return null;} //To be used when displaying page for specific travel listing
-
+    public Iterable<Listing> findAll(){return listingRepository.findAll();}
 
     public void addUserToListing(Long id){
         Listing listing = listingRepository.findById(id).orElse(new Listing());
