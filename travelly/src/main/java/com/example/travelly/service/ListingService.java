@@ -1,9 +1,13 @@
-package com.example.travelly.dao;
+package com.example.travelly.service;
 
-public interface ListingService {
-    public Iterable<Listing> findAll();
-    public Iterable<Listing> findAllUpcoming();
-    public Iterable<Listing> findAllPrevious();
+import com.example.travelly.model.Listing;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ListingService {
+    public Iterable<Listing> findAllUpcoming() {
+        return null;
+    }
 
 
 }
