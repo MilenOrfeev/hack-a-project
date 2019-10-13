@@ -3,6 +3,7 @@ package com.example.travelly.controller;
 import com.example.travelly.model.Listing;
 import com.example.travelly.service.ListingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,13 +30,13 @@ public class HomeController {
     @GetMapping(value = "search")
     public String getDestinations(
             @RequestParam(value = "destination") String destination,
-            @RequestParam(value = "startDate") Date startDate,
-            @RequestParam(value = "endDate") Date endDate,
+            @RequestParam(value = "startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)Date startDate,
+            @RequestParam(value = "endDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date endDate,
             Model model) {
         Iterable<Listing> listings = listingService.findDestinationsBetween(destination, startDate, endDate);
 
         model.addAttribute("listings", listings);
-        return "homepage/index";
+        return "redirect:/";
     }
 
 }
