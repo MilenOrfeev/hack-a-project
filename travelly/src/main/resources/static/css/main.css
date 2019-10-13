@@ -1569,7 +1569,6 @@ span.flatpickr-weekday {
 * {
     box-sizing: border-box;
 }
-
 .s002 {
     min-height: 100vh;
     display: -ms-flexbox;
@@ -1792,6 +1791,31 @@ span.flatpickr-weekday {
     font-family: 'Poppins', sans-serif;
 }
 
+.btn-more {
+    height: 80px;
+    width: 100%;
+    background: #b78a62;
+    white-space: nowrap;
+    border-radius: .5px;
+    color: #fff;
+    transition: all .2s ease-out, color .2s ease-out;
+    border: 0;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 7px;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-bottom: 7px;
+}
+
+.btn-more:hover {
+    background: #af7d51;
+    text-decoration: none;
+    color: #fff;
+}
+
 .s002 form .inner-form .input-field.fifth-wrap .btn-search:hover {
     background: #af7d51;
 }
@@ -1849,6 +1873,19 @@ span.flatpickr-weekday {
     }
 }
 
+/* Results */
+.results-title {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 34px;
+    color: #b78a62;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.results-background {
+    margin-bottom: 20px;
+}
 
 /* Log in*/
 .container-login100 {
