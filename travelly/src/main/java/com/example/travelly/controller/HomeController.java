@@ -29,13 +29,7 @@ public class HomeController {
     //    return "homepage/index";
     //}
 
-    @GetMapping(value = "/")
-    public String getHomepage(Model model) {
-        return "redirect:/?destination=jg6g6&startDate=2019-10-07&endDate=2019-09-30";
-    }
-
-
-    @PostMapping
+    @PostMapping(value = "someurl")
     public String getDestinationsFix(
             @RequestParam(value = "destination") String destination,
             @RequestParam(value = "startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)Date startDate,
