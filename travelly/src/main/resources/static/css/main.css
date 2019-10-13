@@ -155,7 +155,8 @@ mark {
  * Add the correct font size in all browsers.
  */
 small {
-    font-size: 80%;
+    font-size: 60%;
+    line-height: 11px !important;
 }
 
 /**
@@ -1816,6 +1817,8 @@ span.flatpickr-weekday {
     color: #fff;
 }
 
+.
+
 .s002 form .inner-form .input-field.fifth-wrap .btn-search:hover {
     background: #af7d51;
 }
@@ -2034,7 +2037,7 @@ span.flatpickr-weekday {
 
 /*---------------------------------------------*/
 .input100 {
-    font-family: Poppins-Regular;
+    font-family: Poppins;
     color: #333333;
     line-height: 1.2;
     font-size: 18px;
@@ -2044,6 +2047,21 @@ span.flatpickr-weekday {
     background: transparent;
     height: 60px;
     padding: 0 20px;
+}
+
+.input-medium {
+    font-family: Poppins;
+    color: #333333;
+    font-size: 14px;
+
+    display: block;
+    width: 100%;
+    background: transparent;
+    padding: 0 20px;
+}
+
+textarea.input-medium {
+    height: 80px;
 }
 /*------------------------------------------------------------------
 [ Focus Input ]*/
@@ -2251,3 +2269,11 @@ span.flatpickr-weekday {
         }
     }
 }
+
+.create-wrapper {
+    background: #FFFFFF;
+    padding: 20px;
+}
+
+
+
