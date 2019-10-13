@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,6 +42,10 @@ public class ListingService {
         listing.setParticipants(currentList);
 
         listingRepository.save(listing);
+    }
+
+    public Iterable<Listing> findDestinationsBetween(String destination, Date startDate, Date endDate) {
+        return listingRepository.findByStartDateGreaterThanEqualAndEndDateLessThanEqualAndDestination(startDate, endDate, destination);
     }
 
 }

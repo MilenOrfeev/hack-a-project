@@ -17,8 +17,6 @@ public class Security extends WebSecurityConfigurerAdapter {
     public static final String EVENT_ATENDEE_ROLE = "EVENT_ATENDEE";
     public static final String EVENT_ORGANISER_ROLE = "EVENT_ORGANISER";
 
-
-
     // List the mappings/methods for which no authorisation is required.
     // By default we allow all GETs and full access to the H2 console.
     private static final RequestMatcher[] NO_AUTH = { new AntPathRequestMatcher("/**", "GET"),

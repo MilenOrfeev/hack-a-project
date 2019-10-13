@@ -7,8 +7,11 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 //import org.springframework..ui.Model;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Date;
 
 @Controller
 @RequestMapping(value = "/", produces = { MediaType.TEXT_HTML_VALUE })
@@ -23,5 +26,18 @@ public class HomeController {
     //    model.addAttribute("recentListings", listings);
     //    return "homepage/index";
     //}
+
+    @GetMapping(value = "search")
+    public String getDestinations(
+            @RequestParam(value = "destination") String destination,
+            @RequestParam(value = "startDate") Date startDate,
+            @RequestParam(value = "endDate") Date endDate,
+            Model model) {
+        Iterable<Listing> listings = listingService.findDestinationsBetween(destination, startDate, endDate);
+
+        model.addAttribute("listings", listings);
+        return "homepage/index";
+    }
+
 }
 
