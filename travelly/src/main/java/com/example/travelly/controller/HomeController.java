@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -26,6 +27,25 @@ public class HomeController {
     //    model.addAttribute("recentListings", listings);
     //    return "homepage/index";
     //}
+
+    @GetMapping(value = "/")
+    public String getHomepage(Model model) {
+        return "redirect:/?destination=jg6g6&startDate=2019-10-07&endDate=2019-09-30";
+    }
+
+
+    @PostMapping
+    public String getDestinationsFix(
+            @RequestParam(value = "destination") String destination,
+            @RequestParam(value = "startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)Date startDate,
+            @RequestParam(value = "endDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date endDate,
+            Model model) {
+        Iterable<Listing> listings = listingService.findDestinationsBetween(destination, startDate, endDate);
+
+        model.addAttribute("listings", listings);
+        return "redirect:/search";
+    }
+
 
     @GetMapping(value = "search")
     public String getDestinations(
