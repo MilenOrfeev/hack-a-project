@@ -23,5 +23,7 @@ public class HomeController {
         model.addAttribute("recentListings", listings);
         return "index";
     }
+
+
 }
 

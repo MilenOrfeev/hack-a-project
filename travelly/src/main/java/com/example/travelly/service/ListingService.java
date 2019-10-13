@@ -9,5 +9,6 @@ public class ListingService {
         return null;
     }
 
+    public Listing findByID(long id) {return null;} //To be used when displaying page for specific travel listing
 
 }
