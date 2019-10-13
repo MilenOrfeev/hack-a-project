@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(value = "/files", produces = { MediaType.TEXT_HTML_VALUE })
+@RequestMapping(value = "/", produces = { MediaType.TEXT_HTML_VALUE })
 public class HomeController {
     @Autowired
     private ListingService listingService;
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String getListings(Model model) {
-        Iterable<Listing> listings = listingService.findAllUpcoming();
-
-        model.addAttribute("recentListings", listings);
-        return "index";
-    }
+//    @RequestMapping(method = RequestMethod.GET)
+//    public String getListings(Model model) {
+//        Iterable<Listing> listings = listingService.findAllUpcoming();
+//
+//        model.addAttribute("recentListings", listings);
+//        return "index";
+//    }
 }
 
