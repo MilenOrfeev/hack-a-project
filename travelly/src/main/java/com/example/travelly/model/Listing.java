@@ -40,4 +40,10 @@ public class Listing {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date deadline;
 
+    @OneToMany
+    private List<User> participants;
+
+    @OneToOne
+    private User organiser;
+
 }
