@@ -31,7 +31,7 @@ public class Listing {
     @NotNull
     private Date endDate;
 
-    @NotNull
+
     private String description;
 
     @NotNull
