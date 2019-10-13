@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -58,7 +58,7 @@
 						</span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate = "Description is required">
-                        <textarea class="input-medium form-control" name="description"></textarea>
+                        <textarea class="input-medium form-control" name="description" id="description"></textarea>
                         <span class="focus-input100"></span>
                     </div>
 
@@ -74,7 +74,7 @@
                                 <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
                             </svg>
                         </div>-->
-                        <input class="datepicker input-medium form-control" id="depart" type="text" placeholder="29 Aug 2018" />
+                        <input class="datepicker input-medium form-control" id="depart" name="depart" type="text" placeholder="29 Aug 2018" />
                     </div>
 
                     <div class="p-t-20 p-b-9 mt-3">
@@ -89,7 +89,7 @@
                                 <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
                             </svg>
                         </div>-->
-                        <input class="datepicker input-medium form-control" id="return" type="text" placeholder="30 Aug 2018" />
+                        <input class="datepicker input-medium form-control" id="return" name="return" type="text" placeholder="30 Aug 2018" />
                     </div>
 
                     <small>We encourage you to choose a wide period in which you are available to increase your chances to finding trip buddies!</small>

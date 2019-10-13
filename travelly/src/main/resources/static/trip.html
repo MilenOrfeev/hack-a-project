@@ -13,9 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/3428789053.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/util.css">
 </head>
-
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -28,84 +26,38 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#">Log In</a>
+                    <a class="nav-link js-scroll-trigger" href="login.html">Log In</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#">Sign Up</a>
+                    <a class="nav-link js-scroll-trigger" href="../templates/homepage/homepage/signup.html">Sign Up</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="s002">
-    <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33 m-t-50">
-    <form class="login100-form validate-form container">
-					<span class="login100-form-title p-b-53">
-						Log In With
-					</span>
 
-        <a href="#" class="btn-face m-b-20" style="width: 100%;">
-            <i class="fab fa-facebook-square"></i>
-            Facebook
-        </a>
+<div class="trip-background">
+    <div class="container" >
+        <div class="d-flex justify-content-center">
+            <div class="col-sm-10 col-lg-6 create-wrapper">
+                <h2>Trip to Paris</h2>
+                <p>From 23 nov to 27 nov</p>
 
-        <div class="p-t-31 p-b-9">
-						<span class="txt1">
-							Username
-						</span>
-        </div>
-        <div class="wrap-input100 validate-input" data-validate = "Username is required">
-            <input class="form-control input100" type="text" name="username" >
-            <span class="focus-input100"></span>
-        </div>
+                <p>People in this trip:</p>
 
-        <div class="p-t-13 p-b-9">
-						<span class="txt1">
-							Password
-						</span>
+                <ul>
+                    <li>User 1</li>
+                    <li>User 2</li>
+                    <li>User 3</li>
+                </ul>
 
-            <a href="#" class="txt2 bo1 m-l-5">
-                Forgot?
-            </a>
-        </div>
-        <div class="wrap-input100 validate-input" data-validate = "Password is required">
-            <input class="input100 form-control" type="password" name="pass" >
-            <span class="focus-input100"></span>
+                <a href="#" class="btn-more" style="height: 50px;">Join this group! <i class="fas fa-plus"></i></a>
+
+            </div>
         </div>
 
-        <div class="container-login100-form-btn m-t-17">
-            <button class="login100-form-btn">
-                Log in
-            </button>
-        </div>
-
-        <div class="w-full text-center p-t-55">
-						<span class="txt2">
-							Don't have an account?
-						</span>
-
-            <a href="../templates/homepage/homepage/signup.html" class="txt2 bo1">
-                Sign Up now
-            </a>
-        </div>
-    </form>
     </div>
 </div>
-<script src="js/extention/choices.js"></script>
-<script src="js/extention/flatpickr.js"></script>
-<script>
-    flatpickr(".datepicker",
-        {});
-
-</script>
-<script>
-    const choices = new Choices('[data-trigger]',
-        {
-            searchEnabled: true,
-            itemSelectText: '',
-        });
-
-</script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

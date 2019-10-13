@@ -1585,6 +1585,21 @@ span.flatpickr-weekday {
     padding: 15px;
 }
 
+.trip-background {
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: url("../images/travel/paris.jpg");
+    background-size: cover;
+    background-position: center center;
+    padding: 15px;
+}
+
 .s002 form {
     width: 100%;
     max-width: 1190px;
@@ -1952,7 +1967,7 @@ span.flatpickr-weekday {
     align-items: center;
     padding: 15px;
     width: calc((100% - 20px) / 2);
-    height: 70px;
+    height: 55px;
     border-radius: 10px;
     box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
@@ -2045,7 +2060,7 @@ span.flatpickr-weekday {
     display: block;
     width: 100%;
     background: transparent;
-    height: 60px;
+    height: 40px;
     padding: 0 20px;
 }
 
