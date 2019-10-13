@@ -16,12 +16,12 @@ public class HomeController {
     @Autowired
     private ListingService listingService;
 
-//    @RequestMapping(method = RequestMethod.GET)
-//    public String getListings(Model model) {
-//        Iterable<Listing> listings = listingService.findAllUpcoming();
-//
-//        model.addAttribute("recentListings", listings);
-//        return "index";
-//    }
+    //@RequestMapping(method = RequestMethod.GET)
+    //public String getListings(Model model) {
+    //    Iterable<Listing> listings = listingService.findAllUpcoming();
+
+    //    model.addAttribute("recentListings", listings);
+    //    return "homepage/index";
+    //}
 }
 

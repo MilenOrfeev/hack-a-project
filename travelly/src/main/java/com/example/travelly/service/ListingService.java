@@ -20,17 +20,16 @@ public class ListingService {
     }
 
     public Listing findByID(long id) {return null;} //To be used when displaying page for specific travel listing
-    public void addUserToListing(Long id){
-        Listing listing = listingRepository.findById(id);
-
-        List<User> currentList = listing.getParticipants();
-
-        currentList.add(participant);
-
-        listing.setParticipants(currentList);
-
-        listingService.save(listing);
-
-    };
+//    public void addUserToListing(Long id){
+//        Listing listing = listingRepository.findById(id).orElse(new Listing());
+//
+//        List<User> currentList = listing.getParticipants();
+//
+//        currentList.add(participant);
+//
+//        listing.setParticipants(currentList);
+//
+//        listingService.save(listing);
+//    }
 
 }
