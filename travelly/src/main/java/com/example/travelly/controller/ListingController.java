@@ -32,8 +32,8 @@ public class ListingController {
 
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value = "/addUser/{id}", method = RequestMethod.POST)
     public void joinListing(@PathVariable("id") long id, Model model){
-        return;
+        listingService.addUserToListing(id);
     }
 }

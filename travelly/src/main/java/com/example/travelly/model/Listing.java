@@ -32,6 +32,9 @@ public class Listing {
     private Date endDate;
 
     @NotNull
+    private String description;
+
+    @NotNull
     private String destination;
 
     private int capacity;
