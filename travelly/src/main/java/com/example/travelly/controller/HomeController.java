@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping(value = "/", produces = { MediaType.TEXT_HTML_VALUE })
@@ -58,6 +59,14 @@ public class HomeController {
         model.addAttribute("listings", listings);
         return "redirect:/";
     }
+
+    @GetMapping("/")
+    public String showAll(Model model) {
+        model.addAttribute("listings", listingService.findAll());
+
+        return "redirect:/homepage.html";
+    }
+
 
 }
 
