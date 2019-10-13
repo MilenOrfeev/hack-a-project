@@ -8,8 +8,10 @@ import javax.persistence.*;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.List;
 
 @Data
+@Entity
 public class Listing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
